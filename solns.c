@@ -60,3 +60,31 @@ int min(int a[], int l)
   }
 
 
+float average(int a[], int l){
+  
+    int sum=0;
+    for(int i=0; i<l; i++){
+    
+      sum=sum+a[i];
+      }
+      
+    return sum/l;
+    
+ }
+ 
+ int main(void){
+ 
+    int n;
+    printf("How many numbers? - ");
+    scanf("%d", &n);
+    int array[n];
+    for (int i=0; i<n; i++){
+    
+      printf("Enter number %d- ", i+1);
+      scanf("%d", &array[i]);
+    }
+    float av=average(array, n);
+    printf("Average is %f\n", av);
+    
+  } 
+
