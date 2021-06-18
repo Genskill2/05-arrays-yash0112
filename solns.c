@@ -88,3 +88,60 @@ float average(int a[], int l){
     
   } 
 
+
+
+int mode(int a[], int l){
+
+  int max=a[0],i,m,count;
+  for ( i=0; i<l; i++)
+  {
+     if(max<a[i])
+        max=a[i];
+     }
+     printf("%d\n",max);
+   int counts[max+1];
+   for(int j=0;j<=max;j++){
+      count=0;
+      for( i=0; i<l; i++){
+        if(j==a[i])
+           count++;
+        }
+        counts[j]=count;
+     }
+  int maximum=counts[0];
+  for( i=0; i<=max; i++){
+     if(maximum<counts[i])
+        maximum=counts[i];
+    }
+    
+    printf("%d\n",maximum);
+  for(i=0; i<=max; i++){
+  
+   if(maximum==counts[i]){
+      m=i;
+      break;
+      }
+      }
+      printf("%d\n",m);
+      
+      return m;
+      }
+    
+  
+  
+  
+ int main(void){
+ 
+    int n;
+    printf("How many numbers? - ");
+    scanf("%d", &n);
+    int array[n];
+    for (int i=0; i<n; i++){
+    
+      printf("Enter number %d- ", i+1);
+      scanf("%d", &array[i]);
+    }
+    int m=mode(array, n);
+    printf("Mode is %d\n", m);
+    
+  } 
