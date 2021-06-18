@@ -13,23 +13,7 @@ int max(int a[], int l)
     
     return m;
  }
- 
- int main(void){
- 
-   int n;
-   printf("How many numbers? - ");
-   scanf("%d", &n);
-   int array[n];
-   for(int i=0; i<n; i++){
-   
-    printf("Enter number %d- ",i+1);
-    scanf("%d", &array[i]);
-    }
-   int maximum=max(array, n);
-   
-   printf("Max number is %d\n", maximum);
-   
-  }
+
 
 int min(int a[], int l)
 {
@@ -42,23 +26,6 @@ int min(int a[], int l)
     
     return m;
  }
- 
- int main(void){
- 
-   int n;
-   printf("How many numbers? - ");
-   scanf("%d", &n);
-   int array[n];
-   for(int i=0; i<n; i++){
-   
-    printf("Enter number %d- ",i+1);
-    scanf("%d", &array[i]);
-    }
-   int minimum=min(array, n);
-   
-   printf("Min number is %d\n", minimum);
-   
-  }
 
 
 float average(int a[], int l){
@@ -73,22 +40,6 @@ float average(int a[], int l){
     
  }
  
- int main(void){
- 
-    int n;
-    printf("How many numbers? - ");
-    scanf("%d", &n);
-    int array[n];
-    for (int i=0; i<n; i++){
-    
-      printf("Enter number %d- ", i+1);
-      scanf("%d", &array[i]);
-    }
-    float av=average(array, n);
-    printf("Average is %f\n", av);
-    
-  } 
-
 
 
 int mode(int a[], int l){
@@ -127,26 +78,7 @@ int mode(int a[], int l){
       
       return m;
       }
-    
-  
-  
-  
- int main(void){
- 
-    int n;
-    printf("How many numbers? - ");
-    scanf("%d", &n);
-    int array[n];
-    for (int i=0; i<n; i++){
-    
-      printf("Enter number %d- ", i+1);
-      scanf("%d", &array[i]);
-    }
-    int m=mode(array, n);
-    printf("Mode is %d\n", m);
-    
-  } 
-
+   
 
 int factors(int n, int fac[])
 {  int j=0;
@@ -178,16 +110,4 @@ int factors(int n, int fac[])
     
    return j;
 }
-  
-  
-  
- int main(void){
  
-    int num,array[100];
-    printf("Enter a number- ");
-    scanf("%d", &num);
-    int fact=factors(num,array);
-    printf("Number of factors are %d\n",fact);
-    
-    
-  } 
