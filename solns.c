@@ -1,6 +1,6 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
-#include<cs50.c>
+#include<cs50.h>
 
 int max(int a[], int l)
 {
