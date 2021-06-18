@@ -16,11 +16,13 @@ int max(int a[], int l)
  int main(void){
  
    int n;
-   n=get_int("How many numbers?-");
+   printf("How many numbers? - ");
+   scanf("%d", &n);
    int array[n];
    for(int i=0; i<n; i++){
    
-    array[i]=get_int("Enter number %d- ", i+1);
+    printf("Enter number %d- ",i+1);
+    scanf("%d", &array[i]);
     }
    int maximum=max(array, n);
    
