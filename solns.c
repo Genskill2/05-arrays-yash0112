@@ -1,5 +1,6 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
+#include <math.h>
 
 int max(int a[], int l)
 {
@@ -143,5 +144,50 @@ int mode(int a[], int l){
     }
     int m=mode(array, n);
     printf("Mode is %d\n", m);
+    
+  } 
+
+
+int factors(int n, int fac[])
+{  int j=0;
+    
+    while (n%2 == 0)
+    {
+        fac[j]=2;
+        n = n/2;
+        j++;
+    }
+ 
+    for (int i = 3; i <= sqrt(n); i = i+2)
+    {
+        
+        while (n%i == 0)
+        {
+            fac[j]=i;
+            n = n/i;
+            j++;
+        }
+    }
+ 
+    if (n > 2){
+        fac[j]=n;
+        j++;}
+        
+   for(int i=0; i<j; i++){
+       printf("%d ",fac[i]);}
+    
+   return j;
+}
+  
+  
+  
+ int main(void){
+ 
+    int num,array[100];
+    printf("Enter a number- ");
+    scanf("%d", &num);
+    int fact=factors(num,array);
+    printf("Number of factors are %d\n",fact);
+    
     
   } 
